@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-inverse-on-surface: #f4f4f5;
+  --color-surface-container: #e4e4e7;
+  --color-primary: #18181b;
+  --color-surface-tint: #52525b;
+  --color-background: #ffffff;
+  --color-secondary-fixed-dim: #a1a1aa;
+  --color-primary-fixed-dim: #d4d4d8;
+  --color-on-tertiary-container: #18181b;
+  --color-on-surface-variant: #52525b;
+  --color-tertiary: #3f3f46;
+  --color-secondary-fixed: #e4e4e7;
+  --color-on-tertiary: #ffffff;
+  --color-surface-dim: #e4e4e7;
+  --color-on-surface: #18181b;
+  --color-primary-fixed: #e4e4e7;
+  --color-surface-variant: #f4f4f5;
+  --color-on-primary-container: #e4e4e7;
+  --color-on-secondary: #ffffff;
+  --color-outline-variant: #d4d4d8;
+  --color-inverse-primary: #a1a1aa;
+  --color-on-error-container: #93000a;
+  --color-error: #ba1a1a;
+  --color-surface: #ffffff;
+  --color-surface-container-low: #fafafa;
+  --color-on-tertiary-fixed: #18181b;
+  --color-secondary: #71717a;
+  --color-tertiary-container: #d4d4d8;
+  --color-on-secondary-container: #27272a;
+  --color-tertiary-fixed-dim: #71717a;
+  --color-surface-container-high: #e4e4e7;
+  --color-error-container: #ffdad6;
+  --color-primary-container: #27272a;
+  --color-surface-container-highest: #d4d4d8;
+  --color-secondary-container: #e4e4e7;
+  --color-on-primary-fixed: #18181b;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #18181b 0%, #3f3f46 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-gradient {
+  background: linear-gradient(135deg, #18181b 0%, #3f3f46 100%);
+}
+
+.glass-badge {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+html { scroll-behavior: smooth; }
