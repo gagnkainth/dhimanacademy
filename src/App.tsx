@@ -72,12 +72,12 @@ export default function App() {
     <div className="min-h-screen bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
       {/* Top Navigation Bar */}
       <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10">
-        <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full relative z-50">
-          <div className="flex items-center gap-4">
+        <div className="flex justify-between items-center px-4 sm:px-8 py-4 max-w-7xl mx-auto w-full relative z-50">
+          <div className="flex items-center gap-3 sm:gap-4">
             <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-full overflow-hidden shadow-[0_0_15px_rgba(59,130,246,0.3)] shrink-0 transition-shadow hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] border border-black/10">
               <img src="/logo-white.jpg" alt="Dhiman Academy Logo" className="w-[90%] sm:w-[95%] max-w-none h-auto object-contain mix-blend-screen" />
             </div>
-            <div className="text-2xl font-black text-primary tracking-tighter hidden sm:block">Dhiman Academy</div>
+            <div className="text-[1.35rem] sm:text-2xl font-black text-primary tracking-tighter leading-none">Dhiman Academy</div>
           </div>
           <div className="hidden md:flex gap-8 lg:gap-10 items-center">
             <a className="text-primary hover:text-secondary transition-colors font-bold" href="#home">Home</a>
