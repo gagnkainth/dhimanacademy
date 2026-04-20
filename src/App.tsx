@@ -73,7 +73,12 @@ export default function App() {
       {/* Top Navigation Bar */}
       <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10">
         <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full relative z-50">
-          <div className="text-2xl font-black text-primary tracking-tighter">Dhiman Academy</div>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-full overflow-hidden shadow-[0_0_15px_rgba(59,130,246,0.3)] shrink-0 transition-shadow hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] border border-black/10">
+              <img src="/logo-white.jpg" alt="Dhiman Academy Logo" className="w-[90%] sm:w-[95%] max-w-none h-auto object-contain mix-blend-screen" />
+            </div>
+            <div className="text-2xl font-black text-primary tracking-tighter hidden sm:block">Dhiman Academy</div>
+          </div>
           <div className="hidden md:flex gap-8 lg:gap-10 items-center">
             <a className="text-primary hover:text-secondary transition-colors font-bold" href="#home">Home</a>
             <a className="text-primary hover:text-secondary transition-colors font-bold" href="#services">Services</a>
@@ -513,7 +518,12 @@ export default function App() {
         <div className="absolute bottom-0 right-0 w-1/3 h-1/2 bg-secondary-container/5 rounded-full blur-[120px]"></div>
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 relative">
           <div className="space-y-8">
-            <div className="text-2xl font-black tracking-tighter">Dhiman Academy</div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center w-14 h-14 sm:w-20 sm:h-20 bg-white rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.2)] shrink-0 transition-shadow hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] border border-black/10">
+                <img src="/logo-black.jpg" alt="Dhiman Academy Logo" className="w-[90%] sm:w-[95%] max-w-none h-auto object-contain mix-blend-multiply" />
+              </div>
+              <div className="text-2xl font-black tracking-tighter">Dhiman Academy</div>
+            </div>
             <p className="text-primary-fixed-dim/60 text-sm leading-relaxed max-w-sm">
               Your trusted partner in Bilga for expert Visa & Immigration consulting and premier language training. Delivering 11+ years of academic excellence and global success.
             </p>
