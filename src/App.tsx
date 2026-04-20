@@ -257,11 +257,11 @@ export default function App() {
               <div className="py-8 md:py-0">
                 <div className="text-5xl font-black text-secondary-fixed mb-2 tracking-tighter">5.0</div>
                 <div className="flex justify-center gap-1 mb-2">
-                  <span className="material-symbols-outlined text-secondary-fixed text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-secondary-fixed text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-secondary-fixed text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-secondary-fixed text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-secondary-fixed text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-400 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-400 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-400 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-400 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <span className="material-symbols-outlined text-yellow-400 text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 </div>
                 <div className="text-[11px] font-black tracking-[0.3em] uppercase opacity-60">Five Star</div>
               </div>
@@ -389,7 +389,7 @@ export default function App() {
                   <div className="bg-white w-72 h-72 rounded-full flex flex-col items-center justify-center shadow-2xl relative z-10 border-[12px] border-surface">
                     <span className="material-symbols-outlined text-7xl text-secondary mb-3" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
                     <span className="text-5xl font-black text-primary tracking-tighter">5.0</span>
-                    <div className="flex text-secondary my-2 gap-0.5">
+                    <div className="flex text-yellow-400 my-2 gap-0.5">
                       <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                       <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                       <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
