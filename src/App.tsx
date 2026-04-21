@@ -61,6 +61,18 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const heroImages = Array.from({ length: 11 }, (_, i) => `/hero-images/hero${i + 1}.jpeg`);
 
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', `#${targetId}`);
+      }
+    }, 150);
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
@@ -104,11 +116,11 @@ export default function App() {
               className="md:hidden overflow-hidden bg-surface border-b border-outline-variant/10 shadow-2xl absolute top-full left-0 w-full"
             >
               <div className="flex flex-col px-8 py-6 gap-6">
-                <a onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-primary active:text-secondary" href="#home">Home</a>
-                <a onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-primary active:text-secondary" href="#services">Services</a>
-                <a onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-primary active:text-secondary" href="#courses">Courses</a>
-                <a onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-primary active:text-secondary" href="#review">Review</a>
-                <a onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-primary active:text-secondary" href="#contact">Contact</a>
+                <a onClick={(e) => handleMobileNavClick(e, 'home')} className="text-xl font-bold text-primary active:text-secondary" href="#home">Home</a>
+                <a onClick={(e) => handleMobileNavClick(e, 'services')} className="text-xl font-bold text-primary active:text-secondary" href="#services">Services</a>
+                <a onClick={(e) => handleMobileNavClick(e, 'courses')} className="text-xl font-bold text-primary active:text-secondary" href="#courses">Courses</a>
+                <a onClick={(e) => handleMobileNavClick(e, 'review')} className="text-xl font-bold text-primary active:text-secondary" href="#review">Review</a>
+                <a onClick={(e) => handleMobileNavClick(e, 'contact')} className="text-xl font-bold text-primary active:text-secondary" href="#contact">Contact</a>
                 <a onClick={() => setIsMobileMenuOpen(false)} href="tel:+918699430200" className="cta-gradient text-white px-7 py-4 rounded-xl font-bold text-center mt-2 shadow-xl shadow-primary/20">Call Now</a>
               </div>
             </motion.div>
