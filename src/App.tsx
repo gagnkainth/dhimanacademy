@@ -7,7 +7,21 @@ const servicesData = [
     icon: "public",
     title: "Study Visas",
     shortDesc: "Expert guidance for top-tier international universities across the globe.",
-    longDesc: "We provide comprehensive support for students aspiring to study abroad. From university selection and application processing to visa interviews and pre-departure briefings, our expert counselors ensure a smooth transition to your dream destination. We specialize in Canada, UK, Australia, and USA.",
+    longDesc: (
+      <>
+        End-to-end guidance for studying abroad — from course &amp; university selection to applications, visa processing, and pre-departure support.
+        <br /><br />
+        Countries We Cover:<br />
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/ca.png" alt="Canada" className="w-[18px] rounded-sm object-contain" /> Canada</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/gb.png" alt="UK" className="w-[18px] rounded-sm object-contain" /> UK</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/us.png" alt="USA" className="w-[18px] rounded-sm object-contain" /> USA</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/au.png" alt="Australia" className="w-[18px] rounded-sm object-contain" /> Australia</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/nz.png" alt="New Zealand" className="w-[18px] rounded-sm object-contain" /> New Zealand</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/cy.png" alt="Cyprus" className="w-[18px] rounded-sm object-contain" /> Cyprus</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/mu.png" alt="Mauritius" className="w-[18px] rounded-sm object-contain" /> Mauritius</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/eu.png" alt="Europe" className="w-[18px] rounded-sm object-contain" /> Europe</span>
+      </>
+    ),
     action: "Consult Now"
   },
   {
@@ -15,7 +29,17 @@ const servicesData = [
     icon: "luggage",
     title: "Tourist & Visitor Visas",
     shortDesc: "Hassle-free visitor visa processing for over 50 countries worldwide.",
-    longDesc: "Planning a vacation or visiting family abroad? Our tourist visa services simplify the complex application process. We handle documentation, itinerary planning, and embassy appointments, ensuring a high success rate for your travel plans.",
+    longDesc: (
+      <>
+        Hassle-free tourist visa assistance — from documentation and itinerary planning to embassy appointments — ensuring a smooth and successful travel experience.
+        <br /><br />
+        Popular Destinations:<br />
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/ae.png" alt="Dubai" className="w-[18px] rounded-sm object-contain" /> Dubai</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/th.png" alt="Thailand" className="w-[18px] rounded-sm object-contain" /> Thailand</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/sg.png" alt="Singapore" className="w-[18px] rounded-sm object-contain" /> Singapore</span> |{' '}
+        <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/w20/id.png" alt="Bali" className="w-[18px] rounded-sm object-contain" /> Bali</span>
+      </>
+    ),
     action: "Consult Now"
   },
   {
@@ -23,7 +47,7 @@ const servicesData = [
     icon: "language",
     title: "Language Training",
     shortDesc: "Comprehensive IELTS and PTE coaching to achieve your desired band scores.",
-    longDesc: "Master English proficiency with our specialized IELTS and PTE coaching. We offer personalized attention, daily mock tests, and proven strategies to help you achieve 7.5+ bands. Our experienced trainers focus on all four modules: Reading, Writing, Listening, and Speaking.",
+    longDesc: "Master English proficiency with our specialized IELTS and PTE coaching. We offer personalized attention, daily mock tests, and proven strategies to help you achieve 8+ bands. Our experienced trainers focus on all four modules: Reading, Writing, Listening, and Speaking.",
     action: "Consult Now"
   }
 ];
@@ -32,9 +56,9 @@ const coursesData = [
   {
     id: "ielts-pte",
     icon: "language",
-    title: "IELTS & PTE",
-    shortDesc: "Simple teaching skills to achieve 7.5+ bands. Focused grammar sessions and daily mock tests.",
-    longDesc: "Our flagship language programs are designed for absolute success. We provide comprehensive study materials, one-on-one speaking sessions, and detailed feedback on writing tasks. Whether you need General Training for immigration or Academic for studies, we have you covered.",
+    title: "IELTS / PTE Training",
+    shortDesc: "Simple teaching skills to achieve 8+ bands. Focused grammar sessions and daily mock tests.",
+    longDesc: "Expert-led language training to achieve 8+ bands — with certified trainers and flexible online & offline learning options.",
     action: "EXPLORE MODULES"
   },
   {
@@ -42,15 +66,15 @@ const coursesData = [
     icon: "laptop_mac",
     title: "Skill Training",
     shortDesc: "Professional Tally and Computer basics. Industry-standard certifications for the modern workplace.",
-    longDesc: "Equip yourself with essential digital skills. Our practical training covers Tally ERP 9, basic computer operations, MS Office, and advanced Excel. Perfect for students and professionals looking to enhance their employability in the modern job market.",
+    longDesc: "Practical training to build essential skills — including Basic Computer Courses, Tally, and Spoken English. Certified programs designed to boost your career readiness.",
     action: "COURSE DETAILS"
   },
   {
     id: "coachings",
     icon: "account_balance",
-    title: "Coachings",
+    title: "Coaching",
     shortDesc: "Coaching for commerce students (11th & 12th). Concept-driven learning and pattern-based mock exams.",
-    longDesc: "Expert tuition for 11th and 12th-grade commerce students. We focus on building strong foundational concepts in Accountancy, Business Studies, and Economics. Regular assessments and pattern-based mock exams ensure our students excel in their board examinations.",
+    longDesc: "Expert guidance for Classes 11-12 (Science, Commerce & Arts), along with comprehensive support for Classes 1-10 (all subjects). Structured learning with experienced faculty — classes from 3 PM to 6 PM.",
     action: "VIEW SYLLABUS"
   }
 ];
@@ -171,7 +195,7 @@ export default function App() {
                   <motion.h3 layoutId={`title-${activeCard.id}`} className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">{activeCard.title}</motion.h3>
 
                   <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, transition: { duration: 0.1 } }} className="flex-1 flex flex-col">
-                    <p className="text-white/90 mb-6 md:mb-8 leading-relaxed text-base md:text-lg">
+                    <p className="text-white/90 mb-6 md:mb-8 leading-relaxed text-base md:text-lg whitespace-pre-wrap text-justify">
                       {activeCard.longDesc}
                     </p>
 
@@ -207,7 +231,7 @@ export default function App() {
                 </div>
 
                 <h1 className="text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black text-primary leading-[1.05] tracking-tighter mb-6">
-                  From <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">IELTS</span> Preparation to your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Visa.</span>
+                  From <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">IELTS</span> Preparation to <span className="whitespace-nowrap">Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Visa</span> Approval.</span>
                 </h1>
 
                 <p className="text-lg xl:text-xl text-on-surface-variant mb-10 leading-relaxed text-justify">
@@ -278,7 +302,7 @@ export default function App() {
                 <div className="text-[11px] font-black tracking-[0.3em] uppercase opacity-60">Five Star</div>
               </div>
               <div className="py-8 md:py-0">
-                <div className="text-5xl font-black text-secondary-fixed mb-2 tracking-tighter">11 Yrs</div>
+                <div className="text-5xl font-black text-secondary-fixed mb-2 tracking-tighter">11+ Yrs</div>
                 <div className="text-[11px] font-black tracking-[0.3em] uppercase opacity-60">Of Academic Excellence</div>
               </div>
             </div>
