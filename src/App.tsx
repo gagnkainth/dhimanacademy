@@ -231,7 +231,7 @@ export default function App() {
                 </div>
 
                 <h1 className="text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black text-primary leading-[1.05] tracking-tighter mb-6">
-                  From <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">IELTS</span> Preparation to <span className="whitespace-nowrap">Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Visa</span> Approval.</span>
+                  From <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">IELTS</span> Preparation to Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Visa</span> Approval.
                 </h1>
 
                 <p className="text-lg xl:text-xl text-on-surface-variant mb-10 leading-relaxed text-justify">
