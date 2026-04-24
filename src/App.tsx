@@ -645,10 +645,6 @@ export default function App() {
         </div>
         <div className="max-w-7xl mx-auto px-8 mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold text-primary-fixed-dim/30 uppercase tracking-[0.2em]">
           <span>© 2026 Dhiman Academy Bilga. All rights reserved.</span>
-          <div className="flex gap-8">
-            <a className="hover:text-white transition-colors cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Privacy Policy</a>
-            <a className="hover:text-white transition-colors cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Terms of Service</a>
-          </div>
         </div>
       </footer>
 
