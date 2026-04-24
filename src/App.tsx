@@ -127,7 +127,7 @@ export default function App() {
             <a className="text-primary hover:text-secondary transition-colors font-bold" href="#home">Home</a>
             <a className="text-primary hover:text-secondary transition-colors font-bold" href="#services">Services</a>
             <a className="text-primary hover:text-secondary transition-colors font-bold" href="#courses">Courses</a>
-            <a className="text-primary hover:text-secondary transition-colors font-bold" href="#review">Review</a>
+            <a className="text-primary hover:text-secondary transition-colors font-bold" href="#review">Result</a>
             <a className="text-primary hover:text-secondary transition-colors font-bold" href="#contact">Contact</a>
             <a href="tel:+918699430200" className="cta-gradient text-white px-7 py-2.5 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/20 active:scale-95 transition-all">Call Now</a>
           </div>
@@ -151,7 +151,7 @@ export default function App() {
                 <a onClick={(e) => handleMobileNavClick(e, 'home')} className="text-xl font-bold text-primary active:text-secondary" href="#home">Home</a>
                 <a onClick={(e) => handleMobileNavClick(e, 'services')} className="text-xl font-bold text-primary active:text-secondary" href="#services">Services</a>
                 <a onClick={(e) => handleMobileNavClick(e, 'courses')} className="text-xl font-bold text-primary active:text-secondary" href="#courses">Courses</a>
-                <a onClick={(e) => handleMobileNavClick(e, 'review')} className="text-xl font-bold text-primary active:text-secondary" href="#review">Review</a>
+                <a onClick={(e) => handleMobileNavClick(e, 'review')} className="text-xl font-bold text-primary active:text-secondary" href="#review">Result</a>
                 <a onClick={(e) => handleMobileNavClick(e, 'contact')} className="text-xl font-bold text-primary active:text-secondary" href="#contact">Contact</a>
                 <a onClick={() => setIsMobileMenuOpen(false)} href="tel:+918699430200" className="cta-gradient text-white px-7 py-4 rounded-xl font-bold text-center mt-2 shadow-xl shadow-primary/20">Call Now</a>
               </div>
