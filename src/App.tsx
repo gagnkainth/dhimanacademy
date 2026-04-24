@@ -491,7 +491,7 @@ export default function App() {
                 </div>
 
                 {/* Optional floating badge */}
-                <div className="absolute bottom-0 right-0 sm:bottom-4 sm:right-4 bg-secondary text-white w-24 h-24 sm:w-32 sm:h-32 rounded-full flex flex-col items-center justify-center shadow-xl z-30 border-4 border-white animate-bounce" style={{ animationDuration: '3s' }}>
+                <div className="absolute bottom-0 right-0 sm:bottom-4 sm:right-4 bg-emerald-500 text-white w-24 h-24 sm:w-32 sm:h-32 rounded-full flex flex-col items-center justify-center shadow-xl z-30 border-4 border-white animate-bounce" style={{ animationDuration: '3s' }}>
                   <span className="material-symbols-outlined text-3xl sm:text-4xl mb-1">verified</span>
                   <span className="text-[10px] sm:text-xs font-black tracking-widest uppercase text-center leading-tight">100%<br />Success</span>
                 </div>
