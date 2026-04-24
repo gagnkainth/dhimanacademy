@@ -79,6 +79,14 @@ const coursesData = [
   }
 ];
 
+const resultImages = [
+  "001.jpeg", "002.jpeg", "003.jpeg", "004.jpeg", "005.jpeg", "006.jpeg", "007.jpeg", "008.jpeg", "009.jpeg", "010.jpeg",
+  "014.jpeg", "015.jpeg", "016.jpeg", "017.jpeg", "018.jpeg", "019.jpeg", "020.jpeg", "021.jpeg", "022.jpeg", "023.jpeg",
+  "024.jpeg", "025.jpeg", "026.jpeg", "027.jpeg", "028.jpeg", "029.jpeg", "030.jpeg", "031.jpeg", "032.jpeg", "033.jpeg",
+  "034.jpeg", "035.jpeg", "036.jpeg", "037.jpeg", "038.jpeg", "039.jpeg", "041.jpeg", "042.jpeg", "044.jpeg", "045.jpeg",
+  "046.jpeg", "047.jpeg"
+];
+
 export default function App() {
   const [currentImage, setCurrentImage] = useState(0);
   const [activeCard, setActiveCard] = useState<any>(null);
@@ -382,63 +390,117 @@ export default function App() {
           </div>
         </motion.section>
 
-        {/* Proof of Excellence / Testimonials */}
-        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.6 }} className="bg-surface-container-low py-32 px-8 relative overflow-hidden" id="review">
+        {/* Proof of Excellence / Circular Gallery */}
+        <section className="bg-surface-container-low py-24 sm:py-32 overflow-hidden relative" id="review">
           {/* Subtle Background Glows */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] rounded-full bg-primary/5 blur-[120px]"></div>
             <div className="absolute -bottom-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-secondary/5 blur-[100px]"></div>
           </div>
-          <div className="max-w-7xl mx-auto px-8 relative z-10">
-            <div className="flex flex-col lg:flex-row gap-20 items-center">
-              <div className="lg:w-2/3">
-                <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-6 block">Student Testimonials</span>
-                <h2 className="text-5xl font-black text-primary mb-16 tracking-tight leading-tight">The Gold Standard of <br />Academic Success.</h2>
-                {/* Main Testimonial Card */}
-                <div className="bg-primary p-10 rounded-3xl shadow-2xl shadow-primary/20 mb-10 relative border border-primary-container">
-                  <span className="material-symbols-outlined text-6xl text-white/10 absolute top-6 right-8">format_quote</span>
-                  <p className="text-white text-xl italic mb-8 leading-relaxed font-medium">"Achieved overall 7.5 bands in IELTS. The atmosphere is outstanding! The teachers are genuinely committed to every student's growth."</p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-secondary text-primary flex items-center justify-center font-bold text-sm">KS</div>
-                    <div>
-                      <h4 className="font-bold text-white">Kaur S</h4>
-                      <p className="text-xs text-secondary font-bold uppercase tracking-widest">IELTS Student</p>
-                    </div>
-                  </div>
+
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+
+            {/* Left Content */}
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Proof of Excellence</span>
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black text-primary mb-6 tracking-tight leading-[1.1]">Our Success <br className="hidden lg:block" />Stories.</h2>
+              <div className="h-1.5 w-24 bg-secondary rounded-full mx-auto lg:mx-0 mb-8"></div>
+              <p className="text-on-surface-variant text-lg mb-10 leading-relaxed">
+                Hundreds of students have achieved their dreams with Dhiman Academy. Witness our recent successful candidates who secured their desired bands and visas to study abroad.
+              </p>
+
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6">
+                <div className="flex -space-x-4">
+                  <div className="w-14 h-14 rounded-full border-4 border-surface bg-gray-200 overflow-hidden shadow-md"><img src={`/results/${resultImages[0]}`} className="w-full h-full object-cover" loading="lazy" /></div>
+                  <div className="w-14 h-14 rounded-full border-4 border-surface bg-gray-300 overflow-hidden shadow-md"><img src={`/results/${resultImages[1]}`} className="w-full h-full object-cover" loading="lazy" /></div>
+                  <div className="w-14 h-14 rounded-full border-4 border-surface bg-gray-400 overflow-hidden shadow-md"><img src={`/results/${resultImages[2]}`} className="w-full h-full object-cover" loading="lazy" /></div>
+                  <div className="w-14 h-14 rounded-full border-4 border-surface bg-primary text-white flex items-center justify-center font-black text-xs shadow-md">+100</div>
                 </div>
-                {/* Secondary Testimonials Grid */}
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-primary p-8 rounded-2xl border border-primary-container shadow-xl">
-                    <p className="text-white/80 mb-6 leading-relaxed italic text-sm">"Teachers helped me score great marks in Accounts and IELTS. Highly personal attention."</p>
-                    <h4 className="font-bold text-secondary text-xs uppercase tracking-widest">— Harman Singh Dosanjh</h4>
-                  </div>
-                  <div className="bg-primary p-8 rounded-2xl border border-primary-container shadow-xl">
-                    <p className="text-white/80 mb-6 leading-relaxed italic text-sm">"Highly recommended for 11th and 12th graders facing trouble in Accountancy."</p>
-                    <h4 className="font-bold text-secondary text-xs uppercase tracking-widest">— Kiran Kaur</h4>
-                  </div>
-                </div>
-              </div>
-              {/* Perfection Badge Side */}
-              <div className="lg:w-1/3 flex justify-center">
-                <div className="relative w-80 h-80 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-secondary-container rounded-full blur-[80px] opacity-20 animate-pulse"></div>
-                  <div className="bg-white w-72 h-72 rounded-full flex flex-col items-center justify-center shadow-2xl relative z-10 border-[12px] border-surface">
-                    <span className="material-symbols-outlined text-7xl text-secondary mb-3" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
-                    <span className="text-5xl font-black text-primary tracking-tighter">5.0</span>
-                    <div className="flex text-yellow-400 my-2 gap-0.5">
-                      <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                      <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                      <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                      <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                      <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                    </div>
-                    <span className="text-[10px] font-black text-on-surface-variant tracking-[0.3em] uppercase">Perfection</span>
-                  </div>
+                <div>
+                  <div className="text-2xl font-black text-primary tracking-tighter">100+</div>
+                  <div className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Recent Visas</div>
                 </div>
               </div>
             </div>
+
+            {/* Right Content - Circular Shape */}
+            <div className="lg:w-1/2 flex justify-center items-center">
+              <div className="relative w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] lg:w-[500px] lg:h-[500px]">
+
+                {/* Decorative outer rings */}
+                <div className="absolute inset-[-20px] sm:inset-[-30px] rounded-full border border-primary/10 animate-[spin_60s_linear_infinite]"></div>
+                <div className="absolute inset-[-40px] sm:inset-[-60px] rounded-full border border-secondary/10 animate-[spin_40s_linear_infinite_reverse]"></div>
+
+                {/* The Main Circle Container */}
+                <div className="absolute inset-0 rounded-full overflow-hidden bg-white shadow-2xl border-8 sm:border-[12px] border-white z-10" style={{ transform: 'translateZ(0)' }}>
+
+                  {/* Horizontal Scrolling 2-Row Grid inside the circle */}
+                  <style>
+                    {`
+                      @keyframes marquee-horizontal {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-50%); }
+                      }
+                    `}
+                  </style>
+
+                  <div className="absolute inset-y-0 left-0 flex h-full animate-[marquee-horizontal_40s_linear_infinite] group hover:[animation-play-state:paused] py-2">
+                    {/* First Block */}
+                    <div className="flex flex-col gap-2 pr-2 h-full">
+                      {/* Row 1 */}
+                      <div className="flex gap-2 h-[calc(50%-0.25rem)]">
+                        {resultImages.slice(0, 21).map((img, index) => (
+                          <div key={`r1-${index}`} className="h-full aspect-[4/5] flex-shrink-0 relative rounded-lg overflow-hidden bg-surface-variant border border-outline-variant/10 shadow-sm">
+                            <img src={`/results/${img}`} alt={`Result ${index}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                          </div>
+                        ))}
+                      </div>
+                      {/* Row 2 */}
+                      <div className="flex gap-2 h-[calc(50%-0.25rem)]">
+                        {resultImages.slice(21, 42).map((img, index) => (
+                          <div key={`r2-${index}`} className="h-full aspect-[4/5] flex-shrink-0 relative rounded-lg overflow-hidden bg-surface-variant border border-outline-variant/10 shadow-sm">
+                            <img src={`/results/${img}`} alt={`Result ${index + 21}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Seamless Duplicate Block */}
+                    <div className="flex flex-col gap-2 pr-2 h-full">
+                      {/* Row 1 */}
+                      <div className="flex gap-2 h-[calc(50%-0.25rem)]">
+                        {resultImages.slice(0, 21).map((img, index) => (
+                          <div key={`dup-r1-${index}`} className="h-full aspect-[4/5] flex-shrink-0 relative rounded-lg overflow-hidden bg-surface-variant border border-outline-variant/10 shadow-sm">
+                            <img src={`/results/${img}`} alt={`Result ${index}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                          </div>
+                        ))}
+                      </div>
+                      {/* Row 2 */}
+                      <div className="flex gap-2 h-[calc(50%-0.25rem)]">
+                        {resultImages.slice(21, 42).map((img, index) => (
+                          <div key={`dup-r2-${index}`} className="h-full aspect-[4/5] flex-shrink-0 relative rounded-lg overflow-hidden bg-surface-variant border border-outline-variant/10 shadow-sm">
+                            <img src={`/results/${img}`} alt={`Result ${index + 21}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Gradient overlays to soften the left and right edges of the circle */}
+                  <div className="absolute left-0 inset-y-0 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent pointer-events-none z-20"></div>
+                  <div className="absolute right-0 inset-y-0 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent pointer-events-none z-20"></div>
+                </div>
+
+                {/* Optional floating badge */}
+                <div className="absolute bottom-0 right-0 sm:bottom-4 sm:right-4 bg-secondary text-white w-24 h-24 sm:w-32 sm:h-32 rounded-full flex flex-col items-center justify-center shadow-xl z-30 border-4 border-white animate-bounce" style={{ animationDuration: '3s' }}>
+                  <span className="material-symbols-outlined text-3xl sm:text-4xl mb-1">verified</span>
+                  <span className="text-[10px] sm:text-xs font-black tracking-widest uppercase text-center leading-tight">100%<br />Success</span>
+                </div>
+
+              </div>
+            </div>
+
           </div>
-        </motion.section>
+        </section>
 
         {/* Map & Contact Section */}
         <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.6 }} className="py-32 px-8 bg-surface" id="contact">
@@ -465,7 +527,7 @@ export default function App() {
                 }} className="space-y-6">
                   <div>
                     <label className="block text-sm font-bold text-primary mb-2">Your Name</label>
-                    <input required name="name" type="text" className="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-5 py-4 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" placeholder="John Doe" />
+                    <input required name="name" type="text" className="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-5 py-4 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" placeholder="Your Name" />
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-primary mb-2">Query Type</label>
@@ -512,6 +574,7 @@ export default function App() {
                     <div>
                       <h4 className="font-bold text-primary text-lg mb-1">Phone Number</h4>
                       <p className="text-on-surface-variant font-medium">+91 86994 30200</p>
+                      <p className="text-on-surface-variant font-medium">+91 75081 58139</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
@@ -575,7 +638,7 @@ export default function App() {
             <div className="text-xs font-black uppercase tracking-[0.3em] text-secondary-fixed">Contact Info</div>
             <div className="space-y-4">
               <p className="text-sm text-primary-fixed-dim/60 flex items-start gap-3"><span className="material-symbols-outlined text-secondary text-lg">location_on</span> <span className="leading-relaxed">Patti - Dunia Mansoor, Near Punjab Gramin Bank,<br />VPO Bilga, Punjab 144036, India</span></p>
-              <p className="text-sm text-primary-fixed-dim/60 flex items-start gap-3"><span className="material-symbols-outlined text-secondary text-lg">call</span> <span>+91 86994 30200</span></p>
+              <p className="text-sm text-primary-fixed-dim/60 flex items-start gap-3"><span className="material-symbols-outlined text-secondary text-lg">call</span> <span>+91 86994 30200, +91 75081 58139</span></p>
               <p className="text-sm text-primary-fixed-dim/60 flex items-start gap-3"><span className="material-symbols-outlined text-secondary text-lg">mail</span> <span>dhimantravels2205@gmail.com<br />dhimanielts@gmail.com</span></p>
             </div>
           </div>
